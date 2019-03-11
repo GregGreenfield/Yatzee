@@ -1,4 +1,23 @@
 <div>
   {{displayDiceNumbers}}
-  
+  <ul class="scorecard-list">
+    <li>ones: {{scorecard.ones}}</li>
+    <li>twos: {{scorecard.twos}}</li>
+    <li>threes: {{scorecard.threes}}</li>
+    <li>fours: {{scorecard.fours}}</li>
+    <li>fives: {{scorecard.fives}}</li>
+    <li>sixes: {{scorecard.sixes}}</li>
+    <li>subtotal upper: {{numbersSubTotalUpper}}</li>
+    <li *ngIf="topSectionBonus">bonus: 25</li>
+    <li>Top Score: {{topScore}}</li>
+    <li>three of a kind: {{scorecard.threeOfAKind}}</li>
+    <li>four of a kind: {{scorecard.fourOfAKind}}</li>
+    <li>full house: {{scorecard.fullHouse}}</li>
+    <li>small straight: {{scorecard.smallStraight}}</li>
+    <li>large straight: {{scorecard.largeStraight}}</li>
+    <li *ngIf="scorecard.yatzee == null">yatzee: </li>
+    <li>chance: {{scorecard.chance}}</li>
+    <li>subtotal lower: {{numbersSubTotalLower}}</li>
+    <li>Total: {{total}}</li>
+  </ul>
 </div>
