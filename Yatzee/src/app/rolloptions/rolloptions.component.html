@@ -1,0 +1,6 @@
+<button (click)="rollDice()">Roll</button>
+
+<div class="dice-container">
+  <app-die *ngFor="let die of dice" [update]="die"></app-die>
+</div>
+
