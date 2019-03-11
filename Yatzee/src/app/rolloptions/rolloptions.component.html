@@ -1,5 +1,7 @@
-<button (click)="rollDice()">Roll</button>
-
+<div>
+  Number of rolls left {{numberOfRolls}}
+  <button (click)="rollDice()">Roll</button>
+</div>
 <div class="dice-container">
   <app-die *ngFor="let die of dice" [update]="die"></app-die>
 </div>
