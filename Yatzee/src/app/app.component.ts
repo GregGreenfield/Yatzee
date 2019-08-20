@@ -7,7 +7,7 @@ import { Die } from './die/die.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public dice: Die[] = [{currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}];
   title = 'Yatzee';
   
-  public dice: Die[] = [{currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}] ;
 }

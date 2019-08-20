@@ -14,12 +14,12 @@ export class Scorecard {
     fourOfAKind: number;
     fullHouse: number;
     smallStraight: number;
-    longStraight: number;
+    largeStraight: number;
     yahtzee: number;
     chance: number;
     yahtzeeBouns: number;
 
-    lowerTotal = this.threeOfAKind + this.fourOfAKind + this.fullHouse + this.smallStraight + this.longStraight + this.yahtzee + this.chance + this.yahtzeeBouns;
+    lowerTotal = this.threeOfAKind + this.fourOfAKind + this.fullHouse + this.smallStraight + this.largeStraight + this.yahtzee + this.chance + this.yahtzeeBouns;
 
     total = this.upperTotal + this.lowerTotal;
 };

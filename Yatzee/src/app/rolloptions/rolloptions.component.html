@@ -1,4 +1,4 @@
-<ng-container *ngIf="rollNumber < 3; else elseTemplate">
+<ng-container *ngIf="numberOfRolls > 0; else elseTemplate">
     <button (click)="rollDice()">Roll</button>  
 </ng-container>
 <ng-template #elseTemplate>
@@ -7,6 +7,9 @@
   </div>
 </ng-template>
 
+<div>
+  Number of rolls left {{numberOfRolls}}
+</div>
 <div class="dice-container">
   <app-die *ngFor="let die of dice" [update]="die"></app-die>
 </div>

@@ -1,37 +1,25 @@
 <div>
-  <div *ngFor="let die of dice">
-    {{die.currentSelected}}
-  </div>
-
-  <div>
-    <label>ones</label>
-    <p>{{scoreCard.ones}}</p>
-  </div>
-
-  <div>
-    <label>twos</label>
-    <p>{{scoreCards.twos}}</p>
-  </div>
-
-  <div>
-    <label>threes</label>
-    <p>{{scoreCards.threes}}</p>
-  </div>
-
-
-  <div>
-    <label>fours</label>
-    <p>{{scoreCards.fours}}</p>
-  </div>
-
-  <div>
-    <label>fives</label>
-    <p>{{scoreCards.fives}}</p>
-  </div>
-
-  
-  <div>
-    <label>sixes</label>
-    <p>{{scoreCards.sixes}}</p>
-  </div>
+  {{displayDiceNumbers}}
+  <ul class="scorecard-list">
+    <li>ones: {{scorecard.ones}}</li>
+    <li>twos: {{scorecard.twos}}</li>
+    <li>threes: {{scorecard.threes}}</li>
+    <li>fours: {{scorecard.fours}}</li>
+    <li>fives: {{scorecard.fives}}</li>
+    <li>sixes: {{scorecard.sixes}}</li>
+    <li>sub Total: {{scorecard.subtotal}}</li>
+    <li>Bouns?: {{scorecard.topBouns}}</li>
+    <li>Top Score: {{scorecard.upperTotal}}</li>
+    <li>three of a kind: {{scorecard.threeOfAKind}}</li>
+    <li>four of a kind: {{scorecard.fourOfAKind}}</li>
+    <li>full house: {{scorecard.fullHouse}}</li>
+    <li>small straight: {{scorecard.smallStraight}}</li>
+    <li>large straight: {{scorecard.largeStraight}}</li>
+    <li>yatzee: {{scorecard.yahtzee}}</li>
+    <li>chance: {{scorecard.chance}}</li>
+    <li *ngIf="scorecard.yahtzee">yahtzee bouns: {{scorecard.yahtzeeBouns}}</li>
+    <li>Upper Total: {{scorecard.upperTotal}}</li>
+    <li>subtotal lower: {{scorecard.lowerTotal}}</li>
+    <li>Total: {{scorecard.total}}</li>
+  </ul>
 </div>

@@ -10,6 +10,7 @@ export class RolloptionsComponent implements OnInit {
   @Input()
   dice: Die[];
   rollNumber = 0;
+  numberOfRolls = 3;
 
   constructor() { 
   }
@@ -17,13 +18,13 @@ export class RolloptionsComponent implements OnInit {
   ngOnInit() {
   }
 
+
   rollDice(){
     this.dice.forEach(die => { setTimeout(() => {
         if (!die.lockRoll)
           die.currentSelected = Math.floor(Math.random() * 6) + 1;
       }, 1);
     });
-    this.rollNumber++;
+    this.numberOfRolls--;
   }
-
 }

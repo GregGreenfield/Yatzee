@@ -11,12 +11,16 @@ export class ScorecardsComponent implements OnInit {
   @Input()
   dice: Die[];
 
-  scoreCard: Scorecard;
+  public scorecard: Scorecard = new Scorecard();
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.scorecard);
   }
 
+  get displayDiceNumbers(){
+    return this.dice.map(d => d.currentSelected);
+  }
 
 }
