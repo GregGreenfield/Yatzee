@@ -1,3 +1,37 @@
-<p>
-  scorecards works!
-</p>
+<div>
+  <div *ngFor="let die of dice">
+    {{die.currentSelected}}
+  </div>
+
+  <div>
+    <label>ones</label>
+    <p>{{scoreCard.ones}}</p>
+  </div>
+
+  <div>
+    <label>twos</label>
+    <p>{{scoreCards.twos}}</p>
+  </div>
+
+  <div>
+    <label>threes</label>
+    <p>{{scoreCards.threes}}</p>
+  </div>
+
+
+  <div>
+    <label>fours</label>
+    <p>{{scoreCards.fours}}</p>
+  </div>
+
+  <div>
+    <label>fives</label>
+    <p>{{scoreCards.fives}}</p>
+  </div>
+
+  
+  <div>
+    <label>sixes</label>
+    <p>{{scoreCards.sixes}}</p>
+  </div>
+</div>

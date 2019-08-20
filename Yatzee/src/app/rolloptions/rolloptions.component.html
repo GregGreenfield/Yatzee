@@ -1,4 +1,11 @@
-<button (click)="rollDice()">Roll</button>
+<ng-container *ngIf="rollNumber < 3; else elseTemplate">
+    <button (click)="rollDice()">Roll</button>  
+</ng-container>
+<ng-template #elseTemplate>
+  <div>
+    You need to save your roll
+  </div>
+</ng-template>
 
 <div class="dice-container">
   <app-die *ngFor="let die of dice" [update]="die"></app-die>

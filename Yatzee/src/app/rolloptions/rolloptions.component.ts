@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Die } from "../die/die.component";
 
 @Component({
@@ -7,7 +7,9 @@ import { Die } from "../die/die.component";
   styleUrls: ['./rolloptions.component.scss']
 })
 export class RolloptionsComponent implements OnInit {
-  public dice: Die[] = [{currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}] ;
+  @Input()
+  dice: Die[];
+  rollNumber = 0;
 
   constructor() { 
   }
@@ -16,10 +18,12 @@ export class RolloptionsComponent implements OnInit {
   }
 
   rollDice(){
-    this.dice.forEach(die => {
-      if (!die.lockRoll)
-        die.currentSelected = Math.floor(Math.random() * 5) + 1;
+    this.dice.forEach(die => { setTimeout(() => {
+        if (!die.lockRoll)
+          die.currentSelected = Math.floor(Math.random() * 6) + 1;
+      }, 1);
     });
+    this.rollNumber++;
   }
 
 }

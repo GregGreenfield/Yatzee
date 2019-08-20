@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Die } from './die/die.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Yatzee';
+  
+  public dice: Die[] = [{currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}, {currentSelected: 0}] ;
 }
